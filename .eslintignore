@@ -1,0 +1,11 @@
+# dependencies
+node_modules
+
+# misc
+.git
+.cache
+.vscode
+
+# dist
+bin
+dist
