@@ -1,6 +1,6 @@
 {
   "name": "sedmax-dev-kit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "zero configuration kit for remote development",
   "main": "src/index.js",
   "scripts": {

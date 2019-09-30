@@ -1,5 +1,6 @@
 import runDevServer from './server/run-dev-server';
 import createBundler from './bundler/create-bundler';
+import moveAuthConfig from './configs/move-auth-config';
 import getAuthBasedMenu from './ssr/menu/get-auth-based-menu';
 import insertMenuToTemplate from './ssr/menu/insert-menu-to-template';
 import applyRootsToImages from './bundler/plugins/root-syntax/apply-roots-to-images';
@@ -26,6 +27,8 @@ export default async function serve({
   const template = getCopy({ entryPath, tempPath });
 
   const menu = await getAuthBasedMenu({ proxyUrl });
+
+  moveAuthConfig();
 
   compose(
     runDevServer({ publicUrl, proxyUrl, port }),
